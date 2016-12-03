@@ -8,8 +8,8 @@ all: $(EXE)
 $(EXE): main.cpp
 	$(CXX) -o $(EXE) $(CXXFLAGS) main.cpp 	
 
-run: $(EXE)	
-	./$(EXE) < data
+one: $(EXE)	
+	./$(EXE) 0 0 < part_one
 
 sample: $(EXE)	
 	./$(EXE) < sample
