@@ -8,7 +8,7 @@ all: $(EXE)
 $(EXE): main.cpp
 	$(CXX) -o $(EXE) $(CXXFLAGS) main.cpp 	
 
-one: $(EXE)	
+run: $(EXE)	
 	./$(EXE) < input
 
 sample: $(EXE)	
