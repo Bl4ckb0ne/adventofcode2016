@@ -1,18 +1,21 @@
 CXX=clang++
-CXXFLAGS= -std=c++1z
+CXXFLAGS= -std=c++1z -ggdb
 
-EXE=day4
+all: part1 part2
 
-all: $(EXE)
+part1: part1.cpp
+	$(CXX) -o part1 $(CXXFLAGS) part1.cpp
 
-$(EXE): main.cpp
-	$(CXX) -o $(EXE) $(CXXFLAGS) main.cpp 	
+part2: part2.cpp
+	$(CXX) -o part2 $(CXXFLAGS) part2.cpp
 
-run: $(EXE)	
-	./$(EXE) < input
+run: part1 part2	
+	./part1 < input
+	./part2 < input
 
-sample: $(EXE)	
-	./$(EXE) < sample
+sample: part1 part2	
+	./part1 < sample
+	./part2 < sample
 
 clean:
-	rm $(EXE)
+	rm part1 part2
